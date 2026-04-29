@@ -4,16 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>pe.edu.pucp.softprog</groupId>
-    <artifactId>softprog</artifactId>
-    <version>1.1.0-SNAPSHOT</version>
+    <groupId>pe.edu.pucp.lab06.softprog</groupId>
+    <artifactId>Lab06SoftProg</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>softprog-model</module>
-        <module>softprog-dao</module>
-        <module>softprog-db-manager</module>
-        <module>softprog-test</module>
-        <module>softprog-business-logic</module>
+        <module>Lab06SoftProg-db-manager</module>
+        <module>Lab06SoftProg-model</module>
+        <module>Lab06SoftProg-dao</module>
+        <module>Lab06SoftProg-business</module>
+        <module>Lab06SoftProg-test</module>
     </modules>
 
     <properties>
