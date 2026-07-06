@@ -113,3 +113,21 @@ A classic implementation of the Producer-Consumer synchronization problem. Multi
 
 ### `ejercicio4`: Bank Account Simulation (Wait/Notify API)
 A robust simulation modeling concurrent deposits and withdrawals on a shared `CuentaBancaria` (Bank Account). This exercise vividly illustrates the `wait()` and `notifyAll()` primitives. Withdrawal threads evaluating a deficit condition will invoke `wait()` to suspend execution and release the monitor. Conversely, deposit threads, upon injecting funds, invoke `notifyAll()` to awaken the dormant withdrawal threads, allowing them to re-evaluate the account balance and complete their transactions safely without race conditions.
+
+---
+
+## 💻 C# (.NET) Code Examples
+
+The repository also includes a C# implementation of the same exercises to demonstrate concurrency in the .NET ecosystem. You can find them under the [net/sesion-de-clase-24](file:///c:/Users/jlcorcuera/repository/pucp-progra3-2026-01/unit-09-multithreading-and-concurrent-programming/net/sesion-de-clase-24) directory:
+
+### `Ejercicio1`: Thread Instantiation and Execution
+Demonstrates the mechanics of instantiating multiple threads using `System.Threading.Thread` and initiating their execution. It illustrates how the .NET runtime allocates distinct execution paths, allowing background threads to operate independently.
+
+### `Ejercicio2`: Thread Lifecycle and State Monitoring
+Provides an examination of thread states (`ThreadState`). It showcases the programmatic observation of a thread's state transitions, highlighting the utility of the `.Join()` method to enforce the primary thread to await the termination of background execution tasks.
+
+### `Ejercicio3`: Producer-Consumer Coordination
+A C# implementation of the Producer-Consumer synchronization problem. Multiple producer and consumer threads interact with a shared `Identificador` resource, showcasing complex coordination patterns using `Monitor.Wait()` and `Monitor.PulseAll()`. The example leverages `.Join()` to synchronize the termination of all involved threads.
+
+### `Ejercicio4`: Bank Account Simulation (Monitor Pattern)
+A robust simulation modeling concurrent deposits and withdrawals on a shared `CuentaBancaria` (Bank Account). This exercise illustrates the use of the `Monitor` class primitives. Withdrawal threads evaluating a deficit condition will invoke `Monitor.Wait()` to suspend execution and release the lock. Conversely, deposit threads, upon injecting funds, invoke `Monitor.PulseAll()` to awaken the dormant withdrawal threads, allowing them to safely complete their transactions.
