@@ -1,4 +1,4 @@
-package pe.pucp.progra3.rs.dto;
+package pe.pucp.progra3.softprog.rs.dto;
 
 public class AlumnoDTO {
     private String codigo;
